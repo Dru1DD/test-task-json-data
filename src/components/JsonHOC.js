@@ -26,7 +26,7 @@ const Element = ({
             <br />
             <h3>Name: {name}</h3>
             <br />
-            {!isEmptyObject(settings) ? 
+            {Object.keys(settings).length !== 0 ? 
                 <>
                     <h3>Settings: {settings.text}</h3>
                     <br />
@@ -50,11 +50,4 @@ const Element = ({
             }
         </div>
     )
-}
-
-function isEmptyObject (obj) {
-    for (let i in obj) {
-        return false
-    }
-    return true
 }
